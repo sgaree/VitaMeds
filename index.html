@@ -41,10 +41,10 @@
 
             <div class="grid" data-appbuilder-object="grid3" style="z-index: 0;">
                 <div class="container col3" data-appbuilder-object="container"><a class="button" href="#addMed" style="position: relative; z-index: 2;"
-                    data-appbuilder-object="button" data-transition="slide">Add Meds</a>
+                    data-appbuilder-object="button" data-transition="slide" id="">Add Meds</a>
                 </div>
-                <div class="container col3" data-appbuilder-object="container"><a class="button" href="#" style="position: relative; z-index: 2;"
-                    data-appbuilder-object="button" data-transition="slide">Button</a>
+                <div class="container col3" data-appbuilder-object="container"><a class="button" href="#recResult" style="position: relative; z-index: 2;"
+                    data-appbuilder-object="button" data-transition="slide">Results</a>
                 </div>
                 <div class="container col3" data-appbuilder-object="container"><a class="button" href="#" style="" data-appbuilder-object="button">Button</a>
                 </div>
@@ -55,10 +55,12 @@
         <div class="panel" title="Add Medication" data-nav="nav_0" id="addMed" data-appbuilder-object="page"
         style=""></div>
         <div class="panel" title="Record Results" data-nav="nav_0" id="recResult" data-appbuilder-object="page"
+        style="position: relative; z-index: 2;"></div>
+        <div class="panel" title="Settings" data-nav="nav_0" id="settings" data-appbuilder-object="page"
         style=""></div>
     </div>
-    <div id="navbar">
-        <a href="#main" class="icon home">Home</a>
+    <div id="navbar"> <a href="#main" class="icon home">Home</a><a href="#settings" class="icon settings">Settings</a>
+        <a href="#main" class="icon left">Back</a>
     </div>
     <header id="header_0" data-appbuilder-object="header">
         <a id="backButton" href="#" class="button back" style="visibility: visible; ">Back</a>
