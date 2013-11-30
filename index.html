@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><!--HTML5 doctype-->
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="Pragma" content="no-cache">
+<script type="text/javascript" charset="utf-8" src="intelxdk.js"></script>
+<script type="text/javascript" language="javascript">
+    // This event handler is fired once the intel libraries are ready
+    function onDeviceReady() {
+        //hide splash screen now that our app is ready to run
+        intel.xdk.device.hideSplashScreen();
+        setTimeout(function () {
+            $.ui.launch();
+        }, 50);
+    }
+    //initial event handler to detect when intel is ready to roll
+    document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+</script>
+<script src="js/appframework.ui.min.js"></script>
+<script>
+    $.ui.autoLaunch = false;
+    $.ui.useOSThemes = true; //Change this to false to force a device theme
+    $.ui.blockPageScroll();
+    $(document).ready(function () {
+        if ($.ui.useOSThemes && !$.os.ios && $("#afui").get(0).className !== "ios")
+            $("#afui").removeClass("ios");
+    });
+</script>
+<link href="css/icons.css" rel="stylesheet" type="text/css">
+<link href="css/af.ui.css" rel="stylesheet" type="text/css">
+</head>
+
+<div id="afui" class="ios">
+    <div id="header"></div>
+    <div id="content" style="">
+        <div class="panel" title="VitaMeds Tracker" data-nav="nav_0" id="main" selected="selected"
+        style="" data-appbuilder-object="page">
+
+            <div class="grid" data-appbuilder-object="grid3" style="z-index: 0;">
+                <div class="container col3" data-appbuilder-object="container"><a class="button" href="#addMed" style="position: relative; z-index: 2;"
+                    data-appbuilder-object="button" data-transition="slide">Add Meds</a>
+                </div>
+                <div class="container col3" data-appbuilder-object="container"><a class="button" href="#" style="position: relative; z-index: 2;"
+                    data-appbuilder-object="button" data-transition="slide">Button</a>
+                </div>
+                <div class="container col3" data-appbuilder-object="container"><a class="button" href="#" style="" data-appbuilder-object="button">Button</a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="panel" title="Add Medication" data-nav="nav_0" id="addMed" data-appbuilder-object="page"
+        style=""></div>
+        <div class="panel" title="Record Results" data-nav="nav_0" id="recResult" data-appbuilder-object="page"
+        style=""></div>
+    </div>
+    <div id="navbar">
+        <a href="#main" class="icon home">Home</a>
+    </div>
+    <header id="header_0" data-appbuilder-object="header">
+        <a id="backButton" href="#" class="button back" style="visibility: visible; ">Back</a>
+        <h1 id="pageTitle" class="">test</h1> 
+    </header>
+    <nav id="nav_0" data-appbuilder-object="nav">
+        <h1>Side Menu</h1>
+    </nav>
+    <header id="header_1" data-appbuilder-object="header"> <a id="backButton" href="#" class="button">Back</a>
+        <h1 class="">Custom Title</h1> 
+    </header>
+</div>
+
+</html>
