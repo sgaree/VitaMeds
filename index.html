@@ -56,7 +56,49 @@
             </ul>
         </div>
         <div class="panel" title="Add Medication" data-nav="nav_0" id="addMed" data-appbuilder-object="page"
-        style=""></div>
+        style="">
+            <div class="input_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="input">
+                <label for="inMed">Medication</label>
+                <input type="text" style="float:left;" id="inMed" placeholder="Name">
+            </div>
+            <div class="grid" data-appbuilder-object="grid2">
+                <div class="container col2" data-appbuilder-object="container">
+                    <div class="input_element form_element" style="width: 100%; overflow: hidden;"
+                    data-appbuilder-object="input">
+                        <label for="inDose">Dose</label>
+                        <input type="text" style="float:left;" id="inDose" placeholder="Quantity">
+                    </div>
+                </div>
+                <div class="container col2" data-appbuilder-object="container">
+                    <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
+                        <label for="inUnits">Units</label>
+                        <select id="inUnits">
+                            <option value="pills" selected="">Pills</option>
+                            <option value="oz">oz</option>
+                            <option value="mg">mg</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="grid" data-appbuilder-object="grid2">
+                <div class="container col2" data-appbuilder-object="container">
+                    <div class="input_element form_element" style="width: 100%; overflow: hidden;"
+                    data-appbuilder-object="input">
+                        <label for="inFreq">Every</label>
+                        <input type="text" style="float:left;" id="inFreq" placeholder="Number">
+                    </div>
+                </div>
+                <div class="container col2" data-appbuilder-object="container">
+                    <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
+                        <label for="inRepeat">Time</label>
+                        <select id="inRepeat">
+                            <option value="hours" selected="">Hours</option>
+                            <option value="days">Days</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="panel" title="Record Results" data-nav="nav_0" id="recResult" data-appbuilder-object="page"
         style="position: relative; z-index: 2;"></div>
         <div class="panel" title="Settings" data-nav="nav_0" id="settings" data-appbuilder-object="page"
