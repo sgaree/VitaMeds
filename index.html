@@ -47,11 +47,11 @@
 
 
             <ul class="list" data-appbuilder-object="list">
-                <li><a href="#addMed">Add Meds</a>
+                <li><a href="#medications">Medications</a>
                 </li>
-                <li><a href="#recResult">Record Results</a>
+                <li><a href="#recResult">Results</a>
                 </li>
-                <li><a href="#viewReport">View Reports</a>
+                <li><a href="#viewReport">Reports</a>
                 </li>
             </ul>
         </div>
@@ -98,16 +98,218 @@
                     </div>
                 </div>
             </div>
+            <form style="width: 100%;min-height: 50px;" data-appbuilder-object="form" class="">
+                <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
+                    <label for="firstDose">Take First Dose</label>
+                    <select id="firstDose">
+                        <option value="now" selected="">Now</option>
+                        <option value="tonight">Tonight</option>
+                        <option value="morning">Tomorrow Morning</option>
+                    </select>
+                </div>
+            </form>
+            <div class="toggle_element form_element" style="overflow: hidden; z-index: 0;"
+            data-appbuilder-object="toggle">
+                <label>Dosage Reminders</label>
+                <input type="checkbox" id="medReminders" class="toggle" checked="">
+                <label for="medReminders" data-on="Yes" data-off="No"><span></span>
+                </label>
+            </div>
+            <div class="toggle_element form_element" style="overflow: hidden;" data-appbuilder-object="toggle">
+                <label>Caregiver Notifications</label>
+                <input type="checkbox" id="medNotify" class="toggle" checked="">
+                <label for="medNotify" data-on="Yes" data-off="No"><span></span>
+                </label>
+            </div>
+            <div class="toggle_element form_element" style="overflow:hidden" data-appbuilder-object="toggle">
+                <label>Refill Reminders</label>
+                <input type="checkbox" id="medRefill" class="toggle" checked="">
+                <label for="medRefill" data-on="Yes" data-off="No"><span></span>
+                </label>
+            </div>
+            <a class="button" href="#" style="" data-appbuilder-object="button" data-transition="slide"
+            id="addSubmit">Done</a>
         </div>
         <div class="panel" title="Record Results" data-nav="nav_0" id="recResult" data-appbuilder-object="page"
-        style="position: relative; z-index: 2;"></div>
+        style="position: relative; z-index: 2;">
+            <ul class="list" data-appbuilder-object="list">
+                <li><a href="#feelPain">Pain</a>
+                </li>
+                <li><a href="#feelSick">Nausea</a>
+                </li>
+                <li><a href="#feelMood">Mood</a>
+                </li>
+            </ul>
+        </div>
         <div class="panel" title="Settings" data-nav="nav_0" id="settings" data-appbuilder-object="page"
         style=""></div>
         <div class="panel" title="Reports" data-nav="nav_0" id="viewReport" data-appbuilder-object="page"
-        style=""></div>
+        style="">
+            <ul class="list" data-appbuilder-object="list">
+                <li><a href="#doseSchedule">Dosage Schedule</a>
+                </li>
+                <li><a href="#doseHistory">Dosage History</a>
+                </li>
+                <li><a href="#resultsHistory">Results History</a>
+                </li>
+                <li><a href="#combinedHistory">Combined History</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="panel" title="Medications" data-nav="nav_0" id="medications" data-appbuilder-object="page"
+        style="">
+            <ul class="list" data-appbuilder-object="list">
+                <li><a href="#addMed">Add</a>
+                </li>
+                <li><a href="#takeMed">Take</a>
+                </li>
+                <li><a href="#refillMed">Refill</a>
+                </li>
+                <li><a href="#updateDose">Edit Dosage</a>
+                </li>
+                <li><a href="#deleteMed">Delete</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel" title="Take Medication" data-nav="nav_0" id="takeMed" data-appbuilder-object="page"
+        style="">
+            <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
+                <label for="selectTake">Medication</label>
+                <select id="selectTake">
+
+                    <option value="Aspirin" selected="">Aspirin</option>
+                    <option value="Tylenol">Tylenol</option>
+                    <option value="Penicillin">Penicillin</option>
+                </select>
+            </div>
+            <div class="input_element form_element" style="width: 100%; overflow: hidden;"
+            data-appbuilder-object="input">
+                <label for="inDose">Dose</label>
+                <input type="text" style="float:left;" id="inDose" placeholder="Quantity" value="2">
+            </div>
+            <a class="button" href="#" style="" data-appbuilder-object="button" data-transition="slide"
+            id="submitTake">Done</a>
+
+        </div>
+        <div class="panel" title="Refill Medication" data-nav="nav_0" id="refillMed" data-appbuilder-object="page"
+        style="margin: 0px auto;">
+            <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
+                <label for="refillSelect">Medication</label>
+                <select id="refillSelect">
+                    <option value="Aspirin" selected="">Aspirin</option>
+                    <option value="Tylenol">Tylenol</option>
+                    <option value="Penicillin">Penicillin</option>
+                </select>
+            </div>
+            <div class="textarea_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="textarea">
+                <label for="onHand">Quantity on Hand</label>
+                <textarea id="onHand">4</textarea>
+            </div>
+            <a class="button" href="#" style="" data-appbuilder-object="button" data-transition="slide"
+            id="doUpdateQty">Update</a>
+            <div class="textarea_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="textarea">
+                <label for="refillQty">Refill Quantity</label>
+                <textarea id="refillQty">30</textarea>
+            </div><a class="button" href="#" style="margin: 0px auto;" data-appbuilder-object="button"
+            data-transition="slide" id="doRefill">Refill</a>
+        </div>
+        <div class="panel" title="Edit Dosage" data-nav="nav_0" id="updateDose" data-appbuilder-object="page"
+        style="">
+            <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
+                <label for="editSelect">Medication</label>
+                <select id="editSelect">
+                    <option value="Aspirin" selected="">Aspirin</option>
+                    <option value="Tylenol">Tylenol</option>
+                    <option value="Penicillin">Penicillin</option>
+                </select>
+            </div>
+            <div class="grid" data-appbuilder-object="grid2">
+                <div class="container col2" data-appbuilder-object="container">
+                    <div class="input_element form_element" style="width: 100%; overflow: hidden;"
+                    data-appbuilder-object="input">
+                        <label for="inDose">Dose</label>
+                        <input type="text" style="float:left;" id="inDose" placeholder="Quantity">
+                    </div>
+                </div>
+                <div class="container col2" data-appbuilder-object="container">
+                    <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
+                        <label for="inUnits">Units</label>
+                        <select id="inUnits">
+                            <option value="pills" selected="">Pills</option>
+                            <option value="oz">oz</option>
+                            <option value="mg">mg</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="grid" data-appbuilder-object="grid2">
+                <div class="container col2" data-appbuilder-object="container">
+                    <div class="input_element form_element" style="width: 100%; overflow: hidden;"
+                    data-appbuilder-object="input">
+                        <label for="inFreq">Every</label>
+                        <input type="text" style="float:left;" id="inFreq" placeholder="Number">
+                    </div>
+                </div>
+                <div class="container col2" data-appbuilder-object="container">
+                    <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
+                        <label for="inRepeat">Time</label>
+                        <select id="inRepeat">
+                            <option value="hours" selected="">Hours</option>
+                            <option value="days">Days</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="Record Pain" data-nav="nav_0" id="feelPain" data-appbuilder-object="page"
+        style="">
+            <div class="select_element form_element" style="width:100%;overflow:hidden"
+            data-appbuilder-object="select">
+                <label for="painLevel">Pain Level</label>
+                <select id="painLevel">
+                    <option value="0" selected="">0 - No Pain</option>
+                    <option value="1">1 - Mild Pain</option>
+                    <option value="2">2 - Moderate Pain</option>
+                    <option value="3">3 - Severe Pain</option>
+                    <option value="4">4 - Worst Pain Possible</option>
+                    <option value="5">5 - Please Kill Me!</option>
+                </select>
+            </div>
+            <div class="select_element form_element" style="width:100%;overflow:hidden"
+            data-appbuilder-object="select">
+                <label for="painLocation">Pain Location</label>
+                <select id="painLocation">
+                    <option value="head" selected="">Head</option>
+                    <option value="neck">Neck</option>
+                    <option value="chest">Chest</option>
+                    <option value="stomach">Stomach</option>
+                    <option value="groin">Groin</option>
+                    <option value="arm">Arm</option>
+                    <option value="leg">Leg</option>
+                    <option value="pinky">Pinky Toe</option>
+                </select>
+            </div><a class="button" href="#" style="" data-appbuilder-object="button"
+            data-transition="slide" id="submitPain">Done</a>
+        </div>
+        <div class="panel" title="RecordNausea" data-nav="nav_0" id="feelSick"
+        data-appbuilder-object="page" style=""></div>
+        <div class="panel" title="Record Mood" data-nav="nav_0" id="feelMood"
+        data-appbuilder-object="page" style="">
+            <ul class="list" data-appbuilder-object="list">
+                <li><a href="#moodHappy">Happy</a>
+                </li>
+                <li><a href="#moodSad">Sad</a>
+                </li>
+                <li><a href="#moodAngry">Angry</a>
+                </li>
+                <li><a href="#moodSuicidal">Suicidal</a>
+                </li>
+            </ul>
+        </div>
     </div>
     <div id="navbar"> <a href="#main" class="icon home">Home</a><a href="#settings" class="icon settings">Settings</a>
-        <a href="#main" class="icon left">Back</a>
+        <a href="#main" class="icon question">Help</a>
     </div>
     <header id="header_0" data-appbuilder-object="header">
         <a id="backButton" href="#" class="button back" style="visibility: visible; ">Back</a>
