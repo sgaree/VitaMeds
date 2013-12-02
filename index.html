@@ -127,7 +127,7 @@
                 <label for="medRefill" data-on="Yes" data-off="No"><span></span>
                 </label>
             </div>
-            <a class="button" href="#" style="" data-appbuilder-object="button" data-transition="slide"
+            <a class="button" href="#main" style="" data-appbuilder-object="button" data-transition="slide"
             id="addSubmit">Done</a>
         </div>
         <div class="panel" title="Record Results" data-nav="nav_0" id="recResult" data-appbuilder-object="page"
@@ -188,7 +188,7 @@
                 <label for="inDose">Dose</label>
                 <input type="text" style="float:left;" id="inDose" placeholder="Quantity" value="2">
             </div>
-            <a class="button" href="#" style="" data-appbuilder-object="button" data-transition="slide"
+            <a class="button" href="#main" style="" data-appbuilder-object="button" data-transition="slide"
             id="submitTake">Done</a>
 
         </div>
@@ -206,12 +206,12 @@
                 <label for="onHand">Quantity on Hand</label>
                 <textarea id="onHand">4</textarea>
             </div>
-            <a class="button" href="#" style="" data-appbuilder-object="button" data-transition="slide"
+            <a class="button" href="#main" style="" data-appbuilder-object="button" data-transition="slide"
             id="doUpdateQty">Update</a>
             <div class="textarea_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="textarea">
                 <label for="refillQty">Refill Quantity</label>
                 <textarea id="refillQty">30</textarea>
-            </div><a class="button" href="#" style="margin: 0px auto;" data-appbuilder-object="button"
+            </div><a class="button" href="#main" style="margin: 0px auto;" data-appbuilder-object="button"
             data-transition="slide" id="doRefill">Refill</a>
         </div>
         <div class="panel" title="Edit Dosage" data-nav="nav_0" id="updateDose" data-appbuilder-object="page"
@@ -261,11 +261,12 @@
                     </div>
                 </div>
             </div>
+            <a class="button" href="#main" style="" data-appbuilder-object="button" data-transition="slide"
+            id="submitEdit">Done</a>
         </div>
         <div class="panel" title="Record Pain" data-nav="nav_0" id="feelPain" data-appbuilder-object="page"
         style="">
-            <div class="select_element form_element" style="width:100%;overflow:hidden"
-            data-appbuilder-object="select">
+            <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
                 <label for="painLevel">Pain Level</label>
                 <select id="painLevel">
                     <option value="0" selected="">0 - No Pain</option>
@@ -276,8 +277,7 @@
                     <option value="5">5 - Please Kill Me!</option>
                 </select>
             </div>
-            <div class="select_element form_element" style="width:100%;overflow:hidden"
-            data-appbuilder-object="select">
+            <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
                 <label for="painLocation">Pain Location</label>
                 <select id="painLocation">
                     <option value="head" selected="">Head</option>
@@ -289,13 +289,13 @@
                     <option value="leg">Leg</option>
                     <option value="pinky">Pinky Toe</option>
                 </select>
-            </div><a class="button" href="#" style="" data-appbuilder-object="button"
+            </div><a class="button" href="#main" style="" data-appbuilder-object="button"
             data-transition="slide" id="submitPain">Done</a>
         </div>
-        <div class="panel" title="RecordNausea" data-nav="nav_0" id="feelSick"
-        data-appbuilder-object="page" style=""></div>
-        <div class="panel" title="Record Mood" data-nav="nav_0" id="feelMood"
-        data-appbuilder-object="page" style="">
+        <div class="panel" title="RecordNausea" data-nav="nav_0" id="feelSick" data-appbuilder-object="page"
+        style=""></div>
+        <div class="panel" title="Record Mood" data-nav="nav_0" id="feelMood" data-appbuilder-object="page"
+        style="">
             <ul class="list" data-appbuilder-object="list">
                 <li><a href="#moodHappy">Happy</a>
                 </li>
