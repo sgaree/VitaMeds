@@ -151,6 +151,8 @@
         <div class="panel" title="Reports" data-nav="nav_0" id="viewReport" data-appbuilder-object="page"
         style="">
             <ul class="list" data-appbuilder-object="list">
+                <li><a href="#medList">Medication List</a>
+                </li>
                 <li><a href="#doseSchedule">Dosage Schedule</a>
                 </li>
                 <li><a href="#doseHistory">Dosage History</a>
@@ -196,6 +198,8 @@
             <a class="button" href="#main" style="" data-appbuilder-object="button" data-transition="slide"
             id="submitTake">Done</a>
 
+            <a class="button" href="#main" style="position: relative; z-index: 2;" data-appbuilder-object="button"
+            data-transition="slide" id="skipTake">Skip Dose</a>
         </div>
         <div class="panel" title="Refill Medication" data-nav="nav_0" id="refillMed" data-appbuilder-object="page"
         style="margin: 0px auto;">
@@ -312,9 +316,87 @@
                 </li>
             </ul>
         </div>
+        <div class="panel" title="Medication List" data-nav="nav_0" id="medList" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text" style="">
+                <ul>
+                    <li>Aspirin</li>
+                    Dose: 2 Pills Every: 4-6 Hours
+                    <p>
+                    </p>
+                    <li>Tylenol</li>
+                    Dose: 2 Pills Every: 4-6 Hours
+                    <p>
+                    </p>
+                    <li>Penicillin</li>Dose: 1 Pill Every: Morning</ul>
+            </div>
+        </div>
+        <div class="panel" title="Dosage Schedule" data-nav="nav_0" id="doseSchedule" data-appbuilder-object="page"
+        style="">
+            <div class="text_item" data-appbuilder-object="text">
+                <ul>
+                    <li>Aspirin</li>
+                    Dose: 2 Pills Due: 0-2 Hours
+                    <p>
+                    </p>
+                    <li>Tylenol</li>
+                    Dose: 2 Pills Due: 2-4 Hours
+                    <p>
+                    </p>
+                    <li>Penicillin</li>Dose: 1 Pill Due: 8:00AM
+                </ul>
+            </div>
+        </div>
+        <div class="panel" title="Combined History" data-nav="nav_0" id="combinedHistory"
+        data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text">
+                <ul>
+                    <li>
+                        <h3>2013-12-04&lt;.h3&gt;</h3>
+                    </li>
+                    <h4>14:08</h4>
+                    <li>Aspirin
+                    </li>
+                    Dose: 2 Pills
+                    <p>
+                    </p>
+                    <li>
+                        <h4>19:17</h4>
+                    </li>
+                    <li>Tylenol</li>
+                    Dose: 2 Pills
+                    <p>
+                    </p>
+                    <li>
+                        <h3>2013-12-05</h3>
+                    </li>
+                    <li>
+                        <h4>08:33</h4>
+                    </li>
+                    <li>Penicillin</li>Dose: 1 Pill <b>Skipped</b>
+                    <h4>1:17PM</h4>
+                    <li>Record Pain</li>
+                    Location: Head
+                    <br>Severity: Severe Pain
+                </ul>
+            </div>
+        </div>
+        <div class="panel" title="Dosage Reminder" data-nav="nav_0" id="doseRemind"
+        data-appbuilder-object="page" style="">
+            <div class="text_item" data-appbuilder-object="text">
+                <h2>Medication Dose Due</h2>
+                <h3>Penicillin</h3>
+                Dose: 1 Pill Due: 8:00AM
+            </div><a class="button" href="#main" style="" data-appbuilder-object="button"
+            data-transition="slide" id="remindTake">Taken</a><a class="button"
+            href="#main" style="" data-appbuilder-object="button" data-transition="slide"
+            id="remindSkip">Skip Dose</a><a class="button" href="#main" style=""
+            data-appbuilder-object="button" data-transition="slide" id="remindSnooze">Snooze 30m</a>
+        </div>
     </div>
-    <div id="navbar"> <a href="#main" class="icon home">Home</a><a href="#settings" class="icon settings">Settings</a>
-        <a href="#main" class="icon question">Help</a>
+    <div id="navbar"><a href="#main" class="icon home">Home</a><a href="#settings" class="icon settings">Settings</a>
+        <a
+        href="#doseRemind" class="icon question">Help</a>
     </div>
     <header id="header_0" data-appbuilder-object="header">
         <a id="backButton" href="#" class="button back" style="visibility: visible; ">Back</a>
