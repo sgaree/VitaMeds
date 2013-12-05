@@ -73,9 +73,14 @@
                     <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
                         <label for="inUnits">Units</label>
                         <select id="inUnits">
+
+
+
                             <option value="pills" selected="">Pills</option>
                             <option value="oz">oz</option>
                             <option value="mg">mg</option>
+                            <option value="tsp">tsp</option>
+                            <option value="tbs">Tbs</option>
                         </select>
                     </div>
                 </div>
@@ -305,20 +310,36 @@
             </div><a class="button" href="#main" style="" data-appbuilder-object="button"
             data-transition="slide" id="submitPain">Done</a>
         </div>
-        <div class="panel" title="RecordNausea" data-nav="nav_0" id="feelSick" data-appbuilder-object="page"
+        <div class="panel" title="Record Nausea" data-nav="nav_0" id="feelSick" data-appbuilder-object="page"
         style=""></div>
         <div class="panel" title="Record Mood" data-nav="nav_0" id="feelMood" data-appbuilder-object="page"
         style="">
-            <ul class="list" data-appbuilder-object="list">
-                <li><a href="#moodHappy">Happy</a>
-                </li>
-                <li><a href="#moodSad">Sad</a>
-                </li>
-                <li><a href="#moodAngry">Angry</a>
-                </li>
-                <li><a href="#moodSuicidal">Suicidal</a>
-                </li>
-            </ul>
+
+            <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
+                <label for="moodType">How do you feel?</label>
+                <select id="moodType">
+                    <option value="happy" selected="">Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="angry">Angry</option>
+                    <option value="depressed">Depressed</option>
+                </select>
+            </div>
+            <div class="select_element form_element" style="width:100%;overflow:hidden" data-appbuilder-object="select">
+                <label for="moodSeverity">Severity</label>
+                <select id="moodSeverity">
+                    <option value="normal" selected="">Normal</option>
+                    <option value="very">Very</option>
+                    <option value="extreme">Extreme</option>
+                </select>
+            </div>
+            <div class="toggle_element form_element" style="overflow:hidden" data-appbuilder-object="toggle">
+                <label>I am in danger of hurting myself</label>
+                <input type="checkbox" id="moodHelp" class="toggle">
+                <label for="moodHelp" data-on="Yes" data-off="No"><span></span>
+                </label>
+            </div>
+            <a class="button" href="#main" style="" data-appbuilder-object="button" data-transition="slide"
+            id="submitMood">Done</a>
         </div>
         <div class="panel" title="Medication List" data-nav="nav_0" id="medList" data-appbuilder-object="page"
         style="">
